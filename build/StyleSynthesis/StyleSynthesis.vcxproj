@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{EC336CF3-6496-4CB0-8AB0-6060AF6C75CE}</ProjectGuid>
+    <RootNamespace>StyleSynthesis</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)..\output\$(ProjectName)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)..\output\$(ProjectName)\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)..\output\$(ProjectName)\$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)..\output\$(ProjectName)\$(Platform)\$(Configuration)\</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>false</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\src\$(ProjectName);$(SolutionDir)..\src\Common;$(SolutionDir)..\3rdparty;$(SolutionDir)..\3rdparty\Eigen;$(SolutionDir)..\3rdparty\fftw\$(Platform)\include;$(SolutionDir)..\3rdparty\glew\include;$(SolutionDir)..\3rdparty\libigl\include;$(SolutionDir)..\3rdparty\libigl\external\tetgen</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <OpenMPSupport>false</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\3rdParty\fftw\$(Platform)\lib;$(SolutionDir)..\3rdParty\glew\lib\Release\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libfftw3-3.lib;glew32.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /Y "$(SolutionDir)..\3rdparty\fftw\$(Platform)\bin\libfftw3-3.dll" "$(OutDir)" &gt; nul
+xcopy /Y "$(SolutionDir)..\3rdparty\glew\bin\Release\$(Platform)\glew32.dll" "$(OutDir)" &gt; nul</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>false</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\src\$(ProjectName);$(SolutionDir)..\src\Common;$(SolutionDir)..\3rdparty;$(SolutionDir)..\3rdparty\Eigen;$(SolutionDir)..\3rdparty\fftw\$(Platform)\include;$(SolutionDir)..\3rdparty\glew\include;$(SolutionDir)..\3rdparty\libigl\include;$(SolutionDir)..\3rdparty\libigl\external\tetgen</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <OpenMPSupport>false</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\3rdParty\fftw\$(Platform)\lib;$(SolutionDir)..\3rdParty\glew\lib\Release\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libfftw3-3.lib;glew32.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /Y "$(SolutionDir)..\3rdparty\fftw\$(Platform)\bin\libfftw3-3.dll" "$(OutDir)" &gt; nul
+xcopy /Y "$(SolutionDir)..\3rdparty\glew\bin\Release\$(Platform)\glew32.dll" "$(OutDir)" &gt; nul</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\src\$(ProjectName);$(SolutionDir)..\src\Common;$(SolutionDir)..\3rdparty;$(SolutionDir)..\3rdparty\Eigen;$(SolutionDir)..\3rdparty\fftw\$(Platform)\include;$(SolutionDir)..\3rdparty\glew\include;$(SolutionDir)..\3rdparty\libigl\include;$(SolutionDir)..\3rdparty\libigl\external\tetgen</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <OpenMPSupport>true</OpenMPSupport>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\3rdParty\fftw\$(Platform)\lib;$(SolutionDir)..\3rdParty\glew\lib\Release\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libfftw3-3.lib;glew32.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /Y "$(SolutionDir)..\3rdparty\fftw\$(Platform)\bin\libfftw3-3.dll" "$(OutDir)" &gt; nul
+xcopy /Y "$(SolutionDir)..\3rdparty\glew\bin\Release\$(Platform)\glew32.dll" "$(OutDir)" &gt; nul</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\src\$(ProjectName);$(SolutionDir)..\src\Common;$(SolutionDir)..\3rdparty;$(SolutionDir)..\3rdparty\Eigen;$(SolutionDir)..\3rdparty\fftw\$(Platform)\include;$(SolutionDir)..\3rdparty\glew\include;$(SolutionDir)..\3rdparty\libigl\include;$(SolutionDir)..\3rdparty\libigl\external\tetgen</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <OpenMPSupport>true</OpenMPSupport>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\3rdParty\fftw\$(Platform)\lib;$(SolutionDir)..\3rdParty\glew\lib\Release\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libfftw3-3.lib;glew32.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /Y "$(SolutionDir)..\3rdparty\fftw\$(Platform)\bin\libfftw3-3.dll" "$(OutDir)" &gt; nul
+xcopy /Y "$(SolutionDir)..\3rdparty\glew\bin\Release\$(Platform)\glew32.dll" "$(OutDir)" &gt; nul</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\Common\Library\libiglLinker.cpp" />
+    <ClCompile Include="..\..\src\Common\Library\TheaKDTreeLinker.cpp" />
+    <ClCompile Include="..\..\src\Common\Utility\FileUtil.cpp" />
+    <ClCompile Include="..\..\src\Common\Utility\PlyExporter.cpp" />
+    <ClCompile Include="..\..\src\Common\Utility\PlyLoader.cpp" />
+    <ClCompile Include="..\..\src\Common\Utility\StringUtil.cpp" />
+    <ClCompile Include="..\..\src\Common\Utility\Timer.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Abstraction\AbstractionSubvolumeTypes.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Context\ContextPartGraph.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Context\ContextPartGraphAssemble.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Context\ContextPartGraphAssembleResult.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Context\ContextPartGraphAssembleUtil.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Context\ContextPartGraphLearning.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Context\ContextPartGraphCrossValidation.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Context\ContextPartGraphLearningCurve.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Context\ContextPartGraphMatch.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Context\ContextPartGraphMatchCurve.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Context\ContextPartGraphNode.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Context\ContextPartGraphNodeDescriptors.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Context\ContextPartGraphNodeGenerator.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Context\ContextPartGraphTabuSearchCurve.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Context\ContextPartGraphTabuSearchPart.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Context\ContextPartGraphTrain.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Context\ContextPartGraphTrainCurve.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Curve\CurveBoundary.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Curve\CurveContour.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Curve\CurveDeformVertex.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Curve\CurveLineSnapping.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Curve\CurveLineVoting.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Curve\CurveRidgeValley.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Curve\CurveSupportLines.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Curve\CurveUtil.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Data\DataUtil.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Data\StyleSynthesisConfig.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Deform\DeformVolumeARAP.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Deform\DeformVolumetricGraph.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Feature\FeatureAsset.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Feature\FeatureCurve.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Feature\FeatureLightFieldDescriptors.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Feature\FeatureMeshCurvature.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Feature\FeatureSaliency.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Feature\FeatureSampleCurvature.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Feature\FeatureShapeDiameterFunctions.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Feature\FeatureShapeDistributions.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Feature\FeatureUtil.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Feature\LFD\CircularityDescriptor.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Feature\LFD\EccentricityDescriptor.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Feature\LFD\FourierDescriptor.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Feature\LFD\LightFieldDescriptor.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Feature\LFD\PPMWriter.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Feature\LFD\RenderContext.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Feature\LFD\ZernikeDescriptor.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\IO\BaseIO.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\IO\Pipeline\PipelineCurveIO.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\IO\Pipeline\PipelineFeatureIO.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\IO\Pipeline\PipelineGraphIO.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\IO\Pipeline\PipelineMatchCurveIO.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\IO\Pipeline\PipelineMatchPartIO.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\IO\Pipeline\PipelineMeshIO.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\IO\Pipeline\PipelineSegmentIO.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\IO\Pipeline\PipelineSimilarityIO.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\IO\Pipeline\PipelineTrainCurveIO.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\IO\Pipeline\PipelineTrainLearningIO.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\IO\Pipeline\PipelineTrainPartIO.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\IO\Pipeline\PipelineTrainValidationIO.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\main.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Match\MatchCurveICP.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Match\MatchLabeledICP.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Match\MatchPrimitiveICP.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Match\MatchRigidICP.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Match\MatchSimpleICP.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Match\MatchUniformICP.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Mesh\MeshSimpleRemesh.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Mesh\MeshUtil.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Sample\SamplePoissonDisk.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Sample\SampleSimplePoissonDisk.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Sample\SampleUtil.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Segment\SegmentGroupApxCvx.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Segment\SegmentMeshApxCvx.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Segment\SegmentMeshPriFit.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Segment\SegmentUtil.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Similarity\SimilarityData.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Similarity\SimilarityDistance.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Similarity\SimilarityDistanceData.cpp" />
+    <ClCompile Include="..\..\src\StyleSynthesis\Similarity\SimilarityMetric.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\Common\Library\CMLHelper.h" />
+    <ClInclude Include="..\..\src\Common\Library\cppoptlibHelper.h" />
+    <ClInclude Include="..\..\src\Common\Library\libiglHelperBegin.h" />
+    <ClInclude Include="..\..\src\Common\Library\libiglHelperEnd.h" />
+    <ClInclude Include="..\..\src\Common\Library\TheaKDTreeHelper.h" />
+    <ClInclude Include="..\..\src\Common\Utility\FileUtil.h" />
+    <ClInclude Include="..\..\src\Common\Utility\PlyExporter.h" />
+    <ClInclude Include="..\..\src\Common\Utility\PlyExporterTemplate.h" />
+    <ClInclude Include="..\..\src\Common\Utility\PlyLoader.h" />
+    <ClInclude Include="..\..\src\Common\Utility\PlyLoaderTemplate.h" />
+    <ClInclude Include="..\..\src\Common\Utility\StringUtil.h" />
+    <ClInclude Include="..\..\src\Common\Utility\Timer.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Abstraction\AbstractionSubvolumeTypes.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Context\ContextPartGraph.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Context\ContextPartGraphAssemble.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Context\ContextPartGraphAssembleResult.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Context\ContextPartGraphAssembleUtil.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Context\ContextPartGraphLearning.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Context\ContextPartGraphCrossValidation.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Context\ContextPartGraphLearningCurve.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Context\ContextPartGraphMatch.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Context\ContextPartGraphMatchCurve.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Context\ContextPartGraphNode.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Context\ContextPartGraphNodeDescriptors.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Context\ContextPartGraphNodeGenerator.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Context\ContextPartGraphTabuSearchCurve.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Context\ContextPartGraphTabuSearchPart.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Context\ContextPartGraphTrain.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Context\ContextPartGraphTrainCurve.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Curve\CurveBoundary.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Curve\CurveContour.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Curve\CurveDeformVertex.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Curve\CurveLineSnapping.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Curve\CurveLineVoting.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Curve\CurveRidgeValley.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Curve\CurveSupportLines.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Curve\CurveUtil.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Data\DataUtil.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Data\StyleSynthesisConfig.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Data\StyleSynthesisTypes.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Deform\DeformVolumeARAP.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Deform\DeformVolumetricGraph.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Feature\FeatureAsset.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Feature\FeatureCurve.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Feature\FeatureLightFieldDescriptors.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Feature\FeatureMeshCurvature.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Feature\FeatureSaliency.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Feature\FeatureSampleCurvature.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Feature\FeatureShapeDiameterFunctions.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Feature\FeatureShapeDistributions.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Feature\FeatureUtil.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Feature\LFD\CircularityDescriptor.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Feature\LFD\constants.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Feature\LFD\EccentricityDescriptor.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Feature\LFD\FourierDescriptor.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Feature\LFD\LightFieldDescriptor.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Feature\LFD\PPMWriter.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Feature\LFD\RenderContext.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Feature\LFD\ZernikeDescriptor.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\IO\BaseIO.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\IO\Pipeline\PipelineCurveIO.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\IO\Pipeline\PipelineFeatureIO.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\IO\Pipeline\PipelineGraphIO.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\IO\Pipeline\PipelineMatchCurveIO.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\IO\Pipeline\PipelineMatchPartIO.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\IO\Pipeline\PipelineMeshIO.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\IO\Pipeline\PipelineSegmentIO.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\IO\Pipeline\PipelineSimilarityIO.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\IO\Pipeline\PipelineTrainCurveIO.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\IO\Pipeline\PipelineTrainLearningIO.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\IO\Pipeline\PipelineTrainPartIO.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\IO\Pipeline\PipelineTrainValidationIO.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Match\MatchCurveICP.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Match\MatchLabeledICP.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Match\MatchPrimitiveICP.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Match\MatchRigidICP.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Match\MatchSimpleICP.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Match\MatchUniformICP.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Mesh\MeshSimpleRemesh.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Mesh\MeshUtil.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Sample\SamplePoissonDisk.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Sample\SampleSimplePoissonDisk.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Sample\SampleUtil.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Segment\SegmentGroupApxCvx.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Segment\SegmentMeshApxCvx.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Segment\SegmentMeshPriFit.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Segment\SegmentUtil.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Similarity\SimilarityData.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Similarity\SimilarityDistance.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Similarity\SimilarityDistanceData.h" />
+    <ClInclude Include="..\..\src\StyleSynthesis\Similarity\SimilarityMetric.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StyleSynthesis.licenseheader" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

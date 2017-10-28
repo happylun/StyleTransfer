@@ -1,0 +1,594 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Src">
+      <UniqueIdentifier>{854c867a-8579-4ad9-abb4-3fbe396ded00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Common">
+      <UniqueIdentifier>{eb5ade2b-d4e6-4f16-b3f3-d9c249030982}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Common\Library">
+      <UniqueIdentifier>{1594a066-a0d4-4b20-a8c8-aa3a34c91eb6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Common\Utility">
+      <UniqueIdentifier>{71274b3f-b56a-4f4a-a863-fbb436a090b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Data">
+      <UniqueIdentifier>{8eefe789-32e4-4c28-a791-922c527e6000}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\IO">
+      <UniqueIdentifier>{c7a56372-9529-4dc8-ae22-40316237b346}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Mesh">
+      <UniqueIdentifier>{7f95d611-fd77-470a-b6aa-6b5cdb1fbace}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Sample">
+      <UniqueIdentifier>{551db7f5-16c5-489c-bb8c-c06191015f2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Abstraction">
+      <UniqueIdentifier>{f891ac1f-b538-47a2-a83a-4c774c8a3589}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Segment">
+      <UniqueIdentifier>{e626eb01-b87e-47d5-9e16-7da524873e24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Curve">
+      <UniqueIdentifier>{da14b30a-6373-48d3-aec6-1aa18b179308}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Feature">
+      <UniqueIdentifier>{304a86e7-26fc-4ad5-9f29-9027ed1a832c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Context">
+      <UniqueIdentifier>{f79054d0-d09a-4188-bc0a-4578f23d0845}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Match">
+      <UniqueIdentifier>{0a647624-44d2-4acb-a810-0afac944172d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Deform">
+      <UniqueIdentifier>{c87e7c25-8f30-441a-8a8d-b7a0cbc4f733}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Similarity">
+      <UniqueIdentifier>{e24eb69c-64ab-40dc-aa7b-32259aac43f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Feature\LFD">
+      <UniqueIdentifier>{8e65af79-c4cc-4c42-b44f-46fe76902c24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\IO\Pipeline">
+      <UniqueIdentifier>{0bbbadc4-e5ac-4a87-a457-a8dfe58012d6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\Common\Utility\FileUtil.cpp">
+      <Filter>Src\Common\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Common\Utility\PlyExporter.cpp">
+      <Filter>Src\Common\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Common\Utility\PlyLoader.cpp">
+      <Filter>Src\Common\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Common\Utility\StringUtil.cpp">
+      <Filter>Src\Common\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Common\Utility\Timer.cpp">
+      <Filter>Src\Common\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Sample\SamplePoissonDisk.cpp">
+      <Filter>Src\Sample</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Data\StyleSynthesisConfig.cpp">
+      <Filter>Src\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\IO\BaseIO.cpp">
+      <Filter>Src\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\main.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Mesh\MeshSimpleRemesh.cpp">
+      <Filter>Src\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Mesh\MeshUtil.cpp">
+      <Filter>Src\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Sample\SampleUtil.cpp">
+      <Filter>Src\Sample</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Segment\SegmentUtil.cpp">
+      <Filter>Src\Segment</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Feature\FeatureUtil.cpp">
+      <Filter>Src\Feature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Context\ContextPartGraph.cpp">
+      <Filter>Src\Context</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Match\MatchSimpleICP.cpp">
+      <Filter>Src\Match</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Match\MatchRigidICP.cpp">
+      <Filter>Src\Match</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Abstraction\AbstractionSubvolumeTypes.cpp">
+      <Filter>Src\Abstraction</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Sample\SampleSimplePoissonDisk.cpp">
+      <Filter>Src\Sample</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Match\MatchCurveICP.cpp">
+      <Filter>Src\Match</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Curve\CurveUtil.cpp">
+      <Filter>Src\Curve</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Feature\FeatureSampleCurvature.cpp">
+      <Filter>Src\Feature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Feature\FeatureMeshCurvature.cpp">
+      <Filter>Src\Feature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Common\Library\libiglLinker.cpp">
+      <Filter>Src\Common\Library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Curve\CurveDeformVertex.cpp">
+      <Filter>Src\Curve</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Deform\DeformVolumetricGraph.cpp">
+      <Filter>Src\Deform</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Deform\DeformVolumeARAP.cpp">
+      <Filter>Src\Deform</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Curve\CurveRidgeValley.cpp">
+      <Filter>Src\Curve</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Curve\CurveBoundary.cpp">
+      <Filter>Src\Curve</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Curve\CurveContour.cpp">
+      <Filter>Src\Curve</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Curve\CurveLineSnapping.cpp">
+      <Filter>Src\Curve</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Curve\CurveLineVoting.cpp">
+      <Filter>Src\Curve</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Curve\CurveSupportLines.cpp">
+      <Filter>Src\Curve</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Context\ContextPartGraphNode.cpp">
+      <Filter>Src\Context</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Context\ContextPartGraphMatch.cpp">
+      <Filter>Src\Context</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Segment\SegmentMeshApxCvx.cpp">
+      <Filter>Src\Segment</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Feature\FeatureAsset.cpp">
+      <Filter>Src\Feature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Feature\FeatureShapeDistributions.cpp">
+      <Filter>Src\Feature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Feature\LFD\CircularityDescriptor.cpp">
+      <Filter>Src\Feature\LFD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Feature\LFD\EccentricityDescriptor.cpp">
+      <Filter>Src\Feature\LFD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Feature\LFD\FourierDescriptor.cpp">
+      <Filter>Src\Feature\LFD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Feature\LFD\LightFieldDescriptor.cpp">
+      <Filter>Src\Feature\LFD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Feature\LFD\PPMWriter.cpp">
+      <Filter>Src\Feature\LFD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Feature\LFD\RenderContext.cpp">
+      <Filter>Src\Feature\LFD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Feature\LFD\ZernikeDescriptor.cpp">
+      <Filter>Src\Feature\LFD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Feature\FeatureLightFieldDescriptors.cpp">
+      <Filter>Src\Feature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Feature\FeatureShapeDiameterFunctions.cpp">
+      <Filter>Src\Feature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Feature\FeatureCurve.cpp">
+      <Filter>Src\Feature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\IO\Pipeline\PipelineCurveIO.cpp">
+      <Filter>Src\IO\Pipeline</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\IO\Pipeline\PipelineSegmentIO.cpp">
+      <Filter>Src\IO\Pipeline</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Segment\SegmentGroupApxCvx.cpp">
+      <Filter>Src\Segment</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\IO\Pipeline\PipelineFeatureIO.cpp">
+      <Filter>Src\IO\Pipeline</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Similarity\SimilarityData.cpp">
+      <Filter>Src\Similarity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\IO\Pipeline\PipelineSimilarityIO.cpp">
+      <Filter>Src\IO\Pipeline</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Similarity\SimilarityDistance.cpp">
+      <Filter>Src\Similarity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\IO\Pipeline\PipelineMeshIO.cpp">
+      <Filter>Src\IO\Pipeline</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Similarity\SimilarityMetric.cpp">
+      <Filter>Src\Similarity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Data\DataUtil.cpp">
+      <Filter>Src\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Feature\FeatureSaliency.cpp">
+      <Filter>Src\Feature</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Context\ContextPartGraphNodeDescriptors.cpp">
+      <Filter>Src\Context</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Similarity\SimilarityDistanceData.cpp">
+      <Filter>Src\Similarity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Context\ContextPartGraphAssemble.cpp">
+      <Filter>Src\Context</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Match\MatchLabeledICP.cpp">
+      <Filter>Src\Match</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\IO\Pipeline\PipelineMatchPartIO.cpp">
+      <Filter>Src\IO\Pipeline</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\IO\Pipeline\PipelineMatchCurveIO.cpp">
+      <Filter>Src\IO\Pipeline</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\IO\Pipeline\PipelineTrainPartIO.cpp">
+      <Filter>Src\IO\Pipeline</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Context\ContextPartGraphTrain.cpp">
+      <Filter>Src\Context</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Context\ContextPartGraphLearning.cpp">
+      <Filter>Src\Context</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Context\ContextPartGraphNodeGenerator.cpp">
+      <Filter>Src\Context</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Context\ContextPartGraphTabuSearchPart.cpp">
+      <Filter>Src\Context</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Match\MatchUniformICP.cpp">
+      <Filter>Src\Match</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Context\ContextPartGraphAssembleUtil.cpp">
+      <Filter>Src\Context</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Context\ContextPartGraphAssembleResult.cpp">
+      <Filter>Src\Context</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Context\ContextPartGraphMatchCurve.cpp">
+      <Filter>Src\Context</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Context\ContextPartGraphTabuSearchCurve.cpp">
+      <Filter>Src\Context</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Match\MatchPrimitiveICP.cpp">
+      <Filter>Src\Match</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Context\ContextPartGraphCrossValidation.cpp">
+      <Filter>Src\Context</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\IO\Pipeline\PipelineTrainCurveIO.cpp">
+      <Filter>Src\IO\Pipeline</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Context\ContextPartGraphTrainCurve.cpp">
+      <Filter>Src\Context</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Context\ContextPartGraphLearningCurve.cpp">
+      <Filter>Src\Context</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\Segment\SegmentMeshPriFit.cpp">
+      <Filter>Src\Segment</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Common\Library\TheaKDTreeLinker.cpp">
+      <Filter>Src\Common\Library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\IO\Pipeline\PipelineGraphIO.cpp">
+      <Filter>Src\IO\Pipeline</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\IO\Pipeline\PipelineTrainValidationIO.cpp">
+      <Filter>Src\IO\Pipeline</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\StyleSynthesis\IO\Pipeline\PipelineTrainLearningIO.cpp">
+      <Filter>Src\IO\Pipeline</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\Common\Utility\FileUtil.h">
+      <Filter>Src\Common\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Common\Utility\PlyExporter.h">
+      <Filter>Src\Common\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Common\Utility\PlyExporterTemplate.h">
+      <Filter>Src\Common\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Common\Utility\PlyLoader.h">
+      <Filter>Src\Common\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Common\Utility\PlyLoaderTemplate.h">
+      <Filter>Src\Common\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Common\Utility\StringUtil.h">
+      <Filter>Src\Common\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Common\Utility\Timer.h">
+      <Filter>Src\Common\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Common\Library\CMLHelper.h">
+      <Filter>Src\Common\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Sample\SamplePoissonDisk.h">
+      <Filter>Src\Sample</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Data\StyleSynthesisTypes.h">
+      <Filter>Src\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Data\StyleSynthesisConfig.h">
+      <Filter>Src\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\IO\BaseIO.h">
+      <Filter>Src\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Mesh\MeshSimpleRemesh.h">
+      <Filter>Src\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Mesh\MeshUtil.h">
+      <Filter>Src\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Sample\SampleUtil.h">
+      <Filter>Src\Sample</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Segment\SegmentUtil.h">
+      <Filter>Src\Segment</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Feature\FeatureUtil.h">
+      <Filter>Src\Feature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Context\ContextPartGraph.h">
+      <Filter>Src\Context</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Match\MatchSimpleICP.h">
+      <Filter>Src\Match</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Match\MatchRigidICP.h">
+      <Filter>Src\Match</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Abstraction\AbstractionSubvolumeTypes.h">
+      <Filter>Src\Abstraction</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Sample\SampleSimplePoissonDisk.h">
+      <Filter>Src\Sample</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Match\MatchCurveICP.h">
+      <Filter>Src\Match</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Curve\CurveUtil.h">
+      <Filter>Src\Curve</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Feature\FeatureSampleCurvature.h">
+      <Filter>Src\Feature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Feature\FeatureMeshCurvature.h">
+      <Filter>Src\Feature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Common\Library\libiglHelperBegin.h">
+      <Filter>Src\Common\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Common\Library\libiglHelperEnd.h">
+      <Filter>Src\Common\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Curve\CurveDeformVertex.h">
+      <Filter>Src\Curve</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Deform\DeformVolumetricGraph.h">
+      <Filter>Src\Deform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Deform\DeformVolumeARAP.h">
+      <Filter>Src\Deform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Curve\CurveRidgeValley.h">
+      <Filter>Src\Curve</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Curve\CurveBoundary.h">
+      <Filter>Src\Curve</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Curve\CurveContour.h">
+      <Filter>Src\Curve</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Curve\CurveLineSnapping.h">
+      <Filter>Src\Curve</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Curve\CurveLineVoting.h">
+      <Filter>Src\Curve</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Curve\CurveSupportLines.h">
+      <Filter>Src\Curve</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Context\ContextPartGraphNode.h">
+      <Filter>Src\Context</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Context\ContextPartGraphMatch.h">
+      <Filter>Src\Context</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Segment\SegmentMeshApxCvx.h">
+      <Filter>Src\Segment</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Feature\FeatureAsset.h">
+      <Filter>Src\Feature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Feature\FeatureShapeDistributions.h">
+      <Filter>Src\Feature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Feature\LFD\CircularityDescriptor.h">
+      <Filter>Src\Feature\LFD</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Feature\LFD\constants.h">
+      <Filter>Src\Feature\LFD</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Feature\LFD\EccentricityDescriptor.h">
+      <Filter>Src\Feature\LFD</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Feature\LFD\FourierDescriptor.h">
+      <Filter>Src\Feature\LFD</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Feature\LFD\LightFieldDescriptor.h">
+      <Filter>Src\Feature\LFD</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Feature\LFD\PPMWriter.h">
+      <Filter>Src\Feature\LFD</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Feature\LFD\RenderContext.h">
+      <Filter>Src\Feature\LFD</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Feature\LFD\ZernikeDescriptor.h">
+      <Filter>Src\Feature\LFD</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Feature\FeatureLightFieldDescriptors.h">
+      <Filter>Src\Feature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Feature\FeatureShapeDiameterFunctions.h">
+      <Filter>Src\Feature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Feature\FeatureCurve.h">
+      <Filter>Src\Feature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\IO\Pipeline\PipelineCurveIO.h">
+      <Filter>Src\IO\Pipeline</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\IO\Pipeline\PipelineSegmentIO.h">
+      <Filter>Src\IO\Pipeline</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Segment\SegmentGroupApxCvx.h">
+      <Filter>Src\Segment</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\IO\Pipeline\PipelineFeatureIO.h">
+      <Filter>Src\IO\Pipeline</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Similarity\SimilarityData.h">
+      <Filter>Src\Similarity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\IO\Pipeline\PipelineSimilarityIO.h">
+      <Filter>Src\IO\Pipeline</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Similarity\SimilarityDistance.h">
+      <Filter>Src\Similarity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\IO\Pipeline\PipelineMeshIO.h">
+      <Filter>Src\IO\Pipeline</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Similarity\SimilarityMetric.h">
+      <Filter>Src\Similarity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Data\DataUtil.h">
+      <Filter>Src\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Feature\FeatureSaliency.h">
+      <Filter>Src\Feature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Context\ContextPartGraphNodeDescriptors.h">
+      <Filter>Src\Context</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Similarity\SimilarityDistanceData.h">
+      <Filter>Src\Similarity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Context\ContextPartGraphAssemble.h">
+      <Filter>Src\Context</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Match\MatchLabeledICP.h">
+      <Filter>Src\Match</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\IO\Pipeline\PipelineMatchPartIO.h">
+      <Filter>Src\IO\Pipeline</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\IO\Pipeline\PipelineMatchCurveIO.h">
+      <Filter>Src\IO\Pipeline</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\IO\Pipeline\PipelineTrainPartIO.h">
+      <Filter>Src\IO\Pipeline</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Context\ContextPartGraphTrain.h">
+      <Filter>Src\Context</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Context\ContextPartGraphLearning.h">
+      <Filter>Src\Context</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Context\ContextPartGraphNodeGenerator.h">
+      <Filter>Src\Context</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Context\ContextPartGraphTabuSearchPart.h">
+      <Filter>Src\Context</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Match\MatchUniformICP.h">
+      <Filter>Src\Match</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Context\ContextPartGraphAssembleUtil.h">
+      <Filter>Src\Context</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Context\ContextPartGraphAssembleResult.h">
+      <Filter>Src\Context</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Context\ContextPartGraphMatchCurve.h">
+      <Filter>Src\Context</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Context\ContextPartGraphTabuSearchCurve.h">
+      <Filter>Src\Context</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Match\MatchPrimitiveICP.h">
+      <Filter>Src\Match</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Common\Library\cppoptlibHelper.h">
+      <Filter>Src\Common\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Context\ContextPartGraphCrossValidation.h">
+      <Filter>Src\Context</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\IO\Pipeline\PipelineTrainCurveIO.h">
+      <Filter>Src\IO\Pipeline</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Context\ContextPartGraphTrainCurve.h">
+      <Filter>Src\Context</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Context\ContextPartGraphLearningCurve.h">
+      <Filter>Src\Context</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\Segment\SegmentMeshPriFit.h">
+      <Filter>Src\Segment</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Common\Library\TheaKDTreeHelper.h">
+      <Filter>Src\Common\Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\IO\Pipeline\PipelineGraphIO.h">
+      <Filter>Src\IO\Pipeline</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\IO\Pipeline\PipelineTrainValidationIO.h">
+      <Filter>Src\IO\Pipeline</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\StyleSynthesis\IO\Pipeline\PipelineTrainLearningIO.h">
+      <Filter>Src\IO\Pipeline</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="StyleSynthesis.licenseheader" />
+  </ItemGroup>
+</Project>
