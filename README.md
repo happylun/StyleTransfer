@@ -65,4 +65,4 @@ The main entry point of the program is in file `src/StyleSynthesis/main.cpp`. Th
 "Functionality Preserving Shape Style Transfer",
 ACM Transactions on Graphics (Proc. ACM SIGGRAPH ASIA 2016)
 
-- For any questions or comments, please contact Zhaoliang Lun ([zlun@cs.umass.edu](mailto:zlun@cs.umass.edu))
+- For any questions or comments, please contact Zhaoliang Lun ([zhaoliang.lun@gmail.com](mailto:zhaoliang.lun@gmail.com))
